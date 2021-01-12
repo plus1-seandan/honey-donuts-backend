@@ -1,3 +1,5 @@
+![Honey Donuts](https://cdn.shopify.com/s/files/1/0040/6146/2626/files/OF_DONUT_LOGO_300x.png?v=1551744283)
+
 # Honey Donuts - Server
 
 Backend for the Honey Donuts website.
