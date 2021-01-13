@@ -1,15 +1,13 @@
 import chai from "chai";
 import chaiHttp from "chai-http";
-import { initServer } from "../src"; //starts up the server before running tests
 import db from "../src/db";
 import fs from "fs";
-import models from "../src/models";
+import { dropDb } from "./dbTest";
 
 chai.should();
 chai.use(chaiHttp);
 
 before(async () => {
-  //load test data
   const sql_string = fs.readFileSync(__dirname + "/review.sql", "utf8");
   await db.query(sql_string);
 });
@@ -70,9 +68,6 @@ describe("Reviews API", () => {
   });
 });
 
-after(() => {
-  models.Review.truncate({ restartIdentity: true, cascade: true });
-  models.Option.truncate({ restartIdentity: true, cascade: true });
-  models.Menu.truncate({ restartIdentity: true, cascade: true });
-  models.Category.truncate({ restartIdentity: true, cascade: true });
+after(async () => {
+  dropDb();
 });
