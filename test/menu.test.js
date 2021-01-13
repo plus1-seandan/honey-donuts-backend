@@ -1,6 +1,6 @@
 import chai from "chai";
 import chaiHttp from "chai-http";
-import { initServer } from "../src"; //need this import for server access
+import { initServer } from "../src/index"; //need this import for server access
 import fs from "fs";
 
 import { createTestDb, initSequelize, createModels, dropDb } from "./dbTest";

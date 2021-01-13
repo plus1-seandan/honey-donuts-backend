@@ -1,13 +1,15 @@
 import chai from "chai";
 import chaiHttp from "chai-http";
-import db from "../src/db";
+import db from "../src";
 import fs from "fs";
-import { dropDb } from "./dbTest";
+import { createTestDb, initSequelize, createModels, dropDb } from "./dbTest";
 
 chai.should();
 chai.use(chaiHttp);
 
 before(async () => {
+  const db = await initSequelize();
+  await createModels(db);
   const sql_string = fs.readFileSync(__dirname + "/review.sql", "utf8");
   await db.query(sql_string);
 });
