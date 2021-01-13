@@ -29,7 +29,11 @@ Test:
 
 ## Configure app
 
-A few configurations are needed to run the project locally.
+You can easily start up the server through docker via the following command:
+
+    $ docker-compose -f docker-compose.yml up
+
+If you wish to launch on your local machine, a few configurations are needed.
 Replace the following values set in **src/settings/index.js** to your local environment.
 
 - `DATABASE_NAME`: This is the main database for the app
@@ -60,6 +64,6 @@ To test locally:
 
     $ yarn test
 
-To test using
+To test using docker
 
     $ docker-compose -f docker-compose-test.yml up
