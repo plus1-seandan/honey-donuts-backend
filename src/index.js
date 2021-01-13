@@ -8,7 +8,7 @@ import bodyParser from "body-parser";
 import ENV from "./settings";
 
 export const initServer = async () => {
-  // const PORT = 8081;
+  const PORT = 8081;
   const app = express();
   app.use(cors("*"));
   //json parsers need to come before router
@@ -21,15 +21,15 @@ export const initServer = async () => {
 
   //sync database
   // await
-  db.sync({
+  await db.sync({
     models,
     // force: process.env.NODE_ENV === "test",
-    logging: false,
+    logging: true,
   }); //force syncs database for developments
 
-  app.listen(ENV.SERVER_PORT, (err) => {
+  app.listen(PORT, (err) => {
     if (!err) {
-      console.log(`Server is running on ${ENV.SERVER_PORT}`);
+      console.log(`Server is running on ${PORT}`);
     } else {
       console.log(err);
     }

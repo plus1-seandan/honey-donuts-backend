@@ -4,7 +4,7 @@ import ENV from "./settings";
 const dbName =
   process.env.NODE_ENV === "test" ? ENV.DATABASE_NAME_TEST : ENV.DATABASE_NAME;
 
-const db = new Sequelize(dbName, ENV.DATABASE_USER, ENV.DATABASE_PWR, {
+const db = new Sequelize("HoneyDonuts", "postgres", "postgres", {
   host: process.env.DB_HOST || "localhost",
   dialect: "postgres",
   define: {

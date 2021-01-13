@@ -7,7 +7,9 @@
     "test": "NODE_ENV=test mocha --require @babel/register",
     "start": "nodemon --exec babel-node src/index.js",
     "build": "babel src -d dist",
-    "serve": "node dist/index.js"
+    "serve": "node dist/index.js",
+    "mocha": "mocha dist/test",
+    "test-docker": "mocha test"
   },
   "keywords": [],
   "author": "",

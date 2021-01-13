@@ -1,0 +1,37 @@
+version: "3.9"
+services:
+  db:
+    image: postgres
+    networks:
+      - webnet
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: HoneyDonuts
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+  web:
+    image: seanysdan/honey-donuts-server-test:latest
+    networks:
+      - webnet
+    environment:
+      DB_HOST: db
+      SERVER_URL: ${SERVER_URL}
+    depends_on:
+      db:
+        condition: service_healthy
+  nginx:
+    image: nginx
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - "8081:80"
+    networks:
+      - webnet
+    depends_on:
+      - web
+networks:
+  webnet:
