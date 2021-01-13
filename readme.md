@@ -13,7 +13,7 @@ Note: This is in combination with the frontend project ([repo](https://github.co
 ## Docker
 
 This project has been containerized and uploaded as a docker image.
-Production: 
+Production:
 `docker pull seanysdan/honey-donuts-server:latest`
 
 Test:
@@ -56,8 +56,10 @@ This will convert the project into a pure javascript for production deployment.
 
 ## Testing APIs
 
-To test locally: 
+To test locally:
+
     $ yarn test
 
-To test using docker: 
-    $ docker-compose -f docker-compose-test.yml up 
+To test using
+
+    $ docker-compose -f docker-compose-test.yml up
