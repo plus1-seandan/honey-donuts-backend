@@ -11,6 +11,9 @@ const Menu = db.define("menu", {
   price: {
     type: Sequelize.DECIMAL(10, 2),
   },
+  image: {
+    type: Sequelize.TEXT,
+  },
 });
 Menu.associate = (models) => {
   //messages belong to a channel

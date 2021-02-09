@@ -23,7 +23,8 @@ export const initServer = async () => {
   // await
   await db.sync({
     models,
-    // force: process.env.NODE_ENV === "test",
+    // force: true,
+    // alter: true,
     logging: true,
   }); //force syncs database for developments
 

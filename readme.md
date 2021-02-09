@@ -8,7 +8,7 @@ Backend for the Honey Donuts website.
 
 Check out a demo of this app [here](http://abortive-lunchroom.surge.sh/).
 
-Note: This is in combination with the frontend project ([repo](https://github.com/seanysdan/honey-donuts-frontend)).
+Note: This is in combination with the frontend project ([repo](https://github.com/seanysdan/honey-donuts-frontend-public)).
 
 ## Docker
 

@@ -517,7 +517,7 @@ insert into categories ( name, created_at, updated_at) values ('breakfast', NOW(
  insert into reviews (rating, first_name, last_name, comments, updated_at, created_at) values (1, 'Ealasaid', 'Cowley', 'Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.
 
  In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.', '7/15/2020', '8/12/2020');
- insert into reviews (rating, first_name, last_name, comments, updated_at, created_at) values (4, 'Issi', 'Wiles', 'Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.
+ insert into reviews (rating, first_name, last_name, comments, updated_at, created_at) values (4, 'Issi', 'Wiles', 'Maecenas trist ique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.
 
  Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.', '10/10/2020', '9/23/2020');
  insert into reviews (rating, first_name, last_name, comments, updated_at, created_at) values (1, 'Noble', 'Willoway', 'Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.
